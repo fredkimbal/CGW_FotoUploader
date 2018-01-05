@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CGW_GalleryUploader.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ftpServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ftp.chloschtergeischter.ch</Value>
+    </Setting>
+    <Setting Name="ftpPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/httpdocs/gallerie/upload</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

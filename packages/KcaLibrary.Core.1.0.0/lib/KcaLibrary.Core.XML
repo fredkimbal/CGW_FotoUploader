@@ -1,0 +1,2931 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KcaLibrary.Core</name>
+    </assembly>
+    <members>
+        <member name="T:KcaLibrary.Core.Types.Enumerations.LineEnding">
+            <summary>
+            Varianten für Zeichenumbrüche
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.LineEnding.Windows">
+            <summary>
+            Windows-Standard (\r\n)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.LineEnding.Unix">
+            <summary>
+            Unix-Standard (\n)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.LineEnding.Macintosh">
+            <summary>
+            Macintosh-Standard (\r)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.LineEnding.Default">
+            <summary>
+            .Net-Framework-Standard
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Items.LanguageTextCollection">
+            <summary>
+            Klasse für das Verwenden mehrsprachiger Texte
+            mittels Zugriff über eines Schlüssels
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Items.LanguageTextCollection.textMap">
+            <summary>
+            Gespeicherte Sprachtexte
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Items.LanguageTextCollection.#ctor(System.Globalization.CultureInfo,System.Collections.Generic.Dictionary{System.UInt64,System.String})">
+            <summary>
+            Konstruktor
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Items.LanguageTextCollection.GetEnumerator">
+            <summary>
+            Enumerator für die Sprachelemente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Items.LanguageTextCollection.Culture">
+            <summary>
+            Name der Culture dieser Sprache
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Items.LanguageTextCollection.Item(System.UInt64)">
+            <summary>
+            Gibt für einen Schlüssel und dem eingestellten LanguageIndex
+            den hinterlegten Text zurück
+            </summary>
+            <param name="key">Schlüssel</param>
+            <returns>Hinterlegter Text in der eingestellten Sprache</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Events.KcaEventArgs">
+            <summary>
+            Definitions-Klasse für alle EventArgs innerhalb von KcaLibrary-Events
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Globalisation.Definitions">
+            <summary>
+            Diverse Definitionen für Globalisierungseinstellungen
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CULTURE_NAME_DE_CH">
+            <summary>
+            Regional-Formatname Deutsch (Schweiz)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CULTURE_NAME_FR_CH">
+            <summary>
+            Regional-Formatname Französisch (Schweiz)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CULTURE_NAME_IT_CH">
+            <summary>
+            Regional-Formatname Italienisch (Schweiz)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CULTURE_NAME_RM_CH">
+            <summary>
+            Regional-Formatname Rätoromanisch (Schweiz)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CULTURE_NAME_EN_US">
+            <summary>
+            Regional-Formatname Englisch (USA)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATEFORMAT_ISO_8601_BASIC">
+            <summary>
+            Datumsformat ISO 8601 Basis
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATEFORMAT_SWISS_SHORT">
+            <summary>
+            Datumsformat Schweiz (kurz)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATEFORMAT_SWISS_LONG">
+            <summary>
+            Datumsformat Schweiz (lang)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.TIMEFORMAT_SWISS_SHORT">
+            <summary>
+            Uhrzeitformat Schweiz (kurz)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.TIMEFORMAT_SWISS_LONG">
+            <summary>
+            Uhrzeitformat Schweiz (long)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_CURRENCY">
+            <summary>
+            Format-Spezifizierer für Währung
+            z.B. 123,46 €
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_DECIMAL">
+            <summary>
+            Format-Spezifizierer für Dezimalzahlen
+            z.B. -001234
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_EXPONENTIAL">
+            <summary>
+            Format-Spezifizierer für Exponentialzahlen
+            z.B. 1.052033E+003
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_FIXPOINT">
+            <summary>
+            Format-Spezifizierer für Festkommazahl
+            z.B. 1234.57
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_GENERAL">
+            <summary>
+            Format-Spezifizierer für Generaldarstellung
+            z.B. 123,456
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_NUMBER">
+            <summary>
+            Format-Spezifizierer für Numerische Darstellung
+            z.B. 1,234.57
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_PERCENT">
+            <summary>
+            Format-Spezifizierer für Prozentzahlen
+            z.B. -39.7 %
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_ROUNDTRIP">
+            <summary>
+            Format-Spezifizierer für Round-Trip-Formatierung
+            z.B. -1234567890.12345678 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NUMBERFORMAT_HEXADECIMAL">
+            <summary>
+            Format-Spezifizierer für Hexdarstellung
+            z.B. FF
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_SHORTDATE">
+            <summary>
+            Format-Spezifizierer für kurze Datumsdarstellung
+            z.B. 6/15/2009 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_LONGDATE">
+            <summary>
+            Format-Spezifizierer für lange Datumsdarstellung
+            z.B. Montag, 15. Juni 2009
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_LONGDATESHORTTIME">
+            <summary>
+            Format-Spezifizierer für lange Datumsdarstellung 
+            und kurze Zeit
+            z.B. Monday, June 15, 2009 1:45 PM
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_LONGDATELONGTIME">
+            <summary>
+            Format-Spezifizierer für lange Datumsdarstellung
+            und lange Zeit
+            z.B. Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_SHORTDATESHORTTIME">
+            <summary>
+            Format-Spezifizierer für lange Datumsdarstellung 
+            und kurze Zeit
+            z.B. 6/15/2009 1:45 PM
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_SHORTDATELONGTIME">
+            <summary>
+            Format-Spezifizierer für lange Datumsdarstellung
+            und lange Zeit
+            z.B. 2009/6/15 13:45:30
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_MONTHDAY">
+            <summary>
+            Format-Spezifizierer für Monat-Tag Darstellung
+            z.B. 15 Juni
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_ROUNDTRIP">
+            <summary>
+            Format-Spezifizierer für RoundTrip-Kind-Darstellung
+            z.B. 2009-06-15T13:45:30.0900000
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_RFC1123">
+            <summary>
+            Format-Spezifizierer für RFC1123-Darstellung
+            z.B. Mon, 15 Jun 2009 20:45:30 GMT
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_SORTABLE">
+            <summary>
+            Format-Spezifizierer für sortierbare Darstellung
+            z.B. 2009-06-15T13:45:30
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_SHORTTIME">
+            <summary>
+            Format-Spezifizierer für kurze Zeitdarstellung
+            z.B. 13:45
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_LONGTIME">
+            <summary>
+            Format-Spezifizierer für kurze Zeitdarstellung
+            z.B. 13:45:30
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_UNIVERSALSORTABLE">
+            <summary>
+            Format-Spezifizierer für universelle sortierbare Darstellung
+            z.B. 2009-06-15 20:45:30Z
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_UNIVERSALFULLDATETIME">
+            <summary>
+            Format-Spezifizierer für universelle sortierbare Darstellung
+            z.B. Monday, June 15, 2009 8:45:30 PM 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.DATETIMEFORMAT_YEARMONTH">
+            <summary>
+            Format-Spezifizierer für Jahr-Monat-Darstellung
+            z.B. Juni 2009 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.TIMESPANFORMAT_CONSTANT">
+            <summary>
+            Format-Spezifizierer für konstante Darstellung
+            z.B. 3.17:25:30.5000000
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.TIMESPANFORMAT_GENERALSHORT">
+            <summary>
+            Format-Spezifizierer für das generelle Kurzformat
+            z.B. 1:3:16:50,599
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.TIMESPANFORMAT_GENERALLONG">
+            <summary>
+            Format-Spezifizierer für das generelle Langformat
+            z.B. 0:18:30:00,0000000 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.ENUM_COMMASEPARATED">
+            <summary>
+            Format-Spezifizierer für kommagetrennte Enumdarstellung
+            z.B. Hidden, Archive 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.ENUM_SUMMED">
+            <summary>
+            Format-Spezifizierer für summierte Enumdarstellung
+            z.B. Hidden, Archive
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.ENUM_NUMERIC">
+            <summary>
+            Format-Spezifizierer für Ganzzahldarstellung
+            z.B. 34
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.ENUM_HEX">
+            <summary>
+            Format-Spezifizierer für Ganzzahldarstellung
+            z.B. 0000000B
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NEWLINE_WINDOWS">
+            <summary>
+            Zeilenumbruch Windows
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NEWLINE_UNIX">
+            <summary>
+            Zeilenumbruch Unix
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.NEWLINE_MACINTOSH">
+            <summary>
+            Zeilenumbruch Macintosh
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.GUID_NUMERICONLY">
+            <summary>
+            Format-Spezifizierer für nur numerische Darstellung
+            z.B. 00000000000000000000000000000000 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.GUID_DEFAULT">
+            <summary>
+            Format-Spezifizierer für stanardmässige Darstellung
+            z.B. 00000000-0000-0000-0000-000000000000
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.GUID_HYPHENS_BRACES">
+            <summary>
+            Format-Spezifizierer für geschweifte Klammer- und Strichdarstellung
+            z.B. {00000000-0000-0000-0000-000000000000}
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.GUID_HYPHENS_PARENTHESES">
+            <summary>
+            Format-Spezifizierer für Ganzzahldarstellung
+            z.B. (00000000-0000-0000-0000-000000000000)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.GUID_HEX">
+            <summary>
+            Format-Spezifizierer für Hexdarstellung
+            z.B. {0x00000000,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}}
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CultureSwissGerman">
+            <summary>
+            Kultureinstellung Deutsch (Schweiz) 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CultureSwissFrench">
+            <summary>
+            Kultureinstellung Französisch (Schweiz) 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CultureSwissItalian">
+            <summary>
+            Kultureinstellung Italienisch (Schweiz) 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CultureSwissRomansh">
+            <summary>
+            Kultureinstellung Rätoromanisch (Schweiz) 
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Globalisation.Definitions.CultureEnglishUs">
+            <summary>
+            Kultureinstellung Englisch (USA) 
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Factories.ThreadFactory">
+            <summary>
+            Statische Factory-Klasse, welche einen neuen, 
+            korrekt initialisierten Background-Thread erzeugt
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Factories.ThreadFactory.NewThread(System.Threading.ParameterizedThreadStart)">
+            <summary>
+            Gibt einen Thread zurück, der standardmässig 
+            ein Backgroud-Thread ist und die korrekten
+            Kultureinstellungen von der Language-Klasse übernimmt
+            </summary>
+            <param name="start">Delegate, welcher beim Thread-Start ausgeführt wird</param>
+            <returns>Vorbereiteter Thread</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Factories.ThreadFactory.NewThread(System.Threading.ThreadStart)">
+            <summary>
+            Gibt einen Thread zurück, der standardmässig 
+            ein Backgroud-Thread ist und die korrekten
+            Kultureinstellungen von der Language-Klasse übernimmt
+            </summary>
+            <param name="start">Delegate, welcher beim Thread-Start ausgeführt wird</param>
+            <returns>Vorbereiteter Thread</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Factories.ThreadFactory.NewThread(System.Threading.ParameterizedThreadStart,System.Int32)">
+            <summary>
+            Gibt einen Thread zurück, der standardmässig 
+            ein Backgroud-Thread ist und die korrekten
+            Kultureinstellungen von der Language-Klasse übernimmt
+            </summary>
+            <param name="start">Delegate, welcher beim Thread-Start ausgeführt wird</param>
+            <param name="maxStackSize">Maximale Stack-Grösse (0 für Default)</param>
+            <returns>Vorbereiteter Thread</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Factories.ThreadFactory.NewThread(System.Threading.ThreadStart,System.Int32)">
+            <summary>
+            Gibt einen Thread zurück, der standardmässig 
+            ein Backgroud-Thread ist und die korrekten
+            Kultureinstellungen von der Language-Klasse übernimmt
+            </summary>
+            <param name="start">Delegate, welcher beim Thread-Start ausgeführt wird</param>
+            <param name="maxStackSize">Maximale Stack-Grösse (0 für Default)</param>
+            <returns>Vorbereiteter Thread</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Exceptions.LanguageXmlNotParsableException">
+            <summary>
+            Exception, welche ausgelöst wird, wenn ein Sprach-XML nicht geladen werden konnte
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException">
+            <summary>
+            Die Basis-Exception für alle KcaLibrary-Exceptions
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.#ctor">
+            <summary>
+            Basiskonstruktor
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.#ctor(System.String)">
+            <summary>
+            Konstruktor mit Fehlermeldung
+            </summary>
+            <param name="message">Fehlermeldung</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Konstruktor mit Fehlermeldung in InnerException
+            </summary>
+            <param name="message">Fehlermeldung</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.#ctor(System.UInt32)">
+            <summary>
+            Basiskonstruktor mit Fehlernummer
+            </summary>
+            <param name="errorNumber">Fehlernummer der Exception</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.#ctor(System.UInt32,System.String)">
+            <summary>
+            Konstruktor mit Fehlernummer und Fehlermeldung
+            </summary>
+            <param name="errorNumber">Fehlernummer der Exception</param>
+            <param name="message">Fehlermeldung</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.#ctor(System.UInt32,System.String,System.Exception)">
+            <summary>
+            Konstruktor mit Fehlernummer, Fehlermeldung und InnerException
+            </summary>
+            <param name="errorNumber">Fehlernummer der Exception</param>
+            <param name="message">Fehlermeldung</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serializer-Konstruktor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            GetObjectData für serialisieren der Fehlernummer-Eigenschaft
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Exceptions.KcaLibraryBaseException.ErrorNumber">
+            <summary>
+            Die Fehlernummer dieser Exception
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.LanguageXmlNotParsableException.#ctor">
+            <summary>
+            Basiskonstruktor
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.LanguageXmlNotParsableException.#ctor(System.String)">
+            <summary>
+            Konstruktor mit Fehlermeldung
+            </summary>
+            <param name="message">Fehlermeldung</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.LanguageXmlNotParsableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Konstruktor mit Fehlermeldung in InnerException
+            </summary>
+            <param name="message">Fehlermeldung</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.LanguageXmlNotParsableException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            GetObjectData für serialisieren der Fehlernummer-Eigenschaft
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="T:KcaLibrary.Core.Globalisation.Converting">
+            <summary>
+            Klasse für Konvertierungen von Datentypen in Zeichenketten und umgekehrt.
+            Verwendet für alle Konvertierungen die in der Language-Klasse definierten 
+            Eigenschaften für Kultur. Verwendet immer ein Serialieirungsformat (RoundTripKind),
+            um die Rückkonvertierung zu ermöglichen
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertBoolean(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Boolean
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertByte(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Byte
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertChar(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Char
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertDateTime(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ DateTime
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertDecimal(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Decimal
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertDouble(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Double
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertInt16(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int16
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertInt32(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int32
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertInt64(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int64
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertUInt16(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt16
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertUInt32(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt32
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertUInt64(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt64
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertSByte(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ SByte
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertSingle(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Single
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertGuid(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Guid
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ConvertEnum``1(System.String)">
+            <summary>
+            Konvertiert die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Enum
+            </summary>
+            <typeparam name="T">Enum-Typ</typeparam>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertBoolean(System.String,System.Boolean@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Boolean zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertByte(System.String,System.Byte@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Byte zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertChar(System.String,System.Char@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Char zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertDateTime(System.String,System.DateTime@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ DateTime zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertDecimal(System.String,System.Decimal@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Decimal zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertDouble(System.String,System.Double@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Double zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertInt16(System.String,System.Int16@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int16 zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertInt32(System.String,System.Int32@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int32 zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertInt64(System.String,System.Int64@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int64 zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertUInt16(System.String,System.UInt16@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt16 zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertUInt32(System.String,System.UInt32@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt32 zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertUInt64(System.String,System.UInt64@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt64 zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertSByte(System.String,System.SByte@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ SByte zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertSingle(System.String,System.Single@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Single zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertGuid(System.String,System.Guid@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Guid zu konvertieren
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.TryConvertEnum``1(System.String,``0@)">
+            <summary>
+            Versucht die übergebene Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Enum zu konvertieren
+            </summary>
+            <typeparam name="T">Enum-Typ</typeparam>
+            <param name="value">Zeichenkette</param>
+            <param name="converted">Konvertierte Variable</param>
+            <returns>Gibt an, ob die Konvertierung erfolgreich war</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Boolean)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Byte)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.SByte)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Char)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Int16)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Int32)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Int64)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.UInt16)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.UInt32)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.UInt64)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Single)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Double)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Decimal)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.TimeSpan)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.DateTime)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Converting.ToFormattedString(System.Guid)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Serialisierungs-Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Items.ValueHolder`1">
+            <summary>
+            Hält einen Wertetyp innerhalb eines Referenz-Objekt für 
+            die Übergabe und Zugriff über eine Referenz
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Items.ValueHolder`1.#ctor(`0)">
+            <summary>
+            Konstruktor
+            </summary>
+            <param name="value">Zu Wert</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Items.ValueHolder`1.op_Implicit(KcaLibrary.Core.Types.Items.ValueHolder{`0})~`0">
+            <summary>
+            Implizites Casting auf den Wertetyp
+            </summary>
+            <param name="item">ValueHolder</param>
+            <returns>TValue</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Items.ValueHolder`1.ToValue(KcaLibrary.Core.Types.Items.ValueHolder{`0})">
+            <summary>
+            Implizites Casting auf den Wertetyp
+            </summary>
+            <param name="item">ValueHolder</param>
+            <returns>TValue</returns>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Items.ValueHolder`1.Value">
+            <summary>
+            Wert
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Exceptions.NoMemberSelectedException">
+            <summary>
+            Die Exception wird augelöst, wenn im MemberwiseEqualityComparer mit den 
+            Einstellungen keine Member vom Typ geladen werden können, die verglichen werden könnten
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.NoMemberSelectedException.#ctor(System.String)">
+            <summary>
+            Basiskonstruktor
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.NoMemberSelectedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Konstruktor mit Fehlermeldung in InnerException
+            </summary>
+            <param name="message">Fehlermeldung</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.NoMemberSelectedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            GetObjectData für serialisieren der Fehlernummer-Eigenschaft
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.NoMemberSelectedException.#ctor">
+            <summary>
+            Basiskonstruktor
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Exceptions.CodepageNotAllowedException">
+            <summary>
+            Exception, welche ausgelöst wird, wenn eine ungültige Codepage-Nummer
+            mitgegeben wird
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.CodepageNotAllowedException.#ctor">
+            <summary>
+            Basiskonstruktor
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.CodepageNotAllowedException.#ctor(System.String)">
+            <summary>
+            Konstruktor mit Fehlermeldung
+            </summary>
+            <param name="message">Fehlermeldung</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.CodepageNotAllowedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Konstruktor mit Fehlermeldung in InnerException
+            </summary>
+            <param name="message">Fehlermeldung</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.CodepageNotAllowedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            GetObjectData für serialisieren der Fehlernummer-Eigenschaft
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Enumerations.KcaLogLevel">
+            <summary>
+            LogLevel für den Logger und Logmeldungen
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.KcaLogLevel.Off">
+            <summary>
+            Keine Logmeldungen loggen (nur Logger)
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.KcaLogLevel.Trace">
+            <summary>
+            Trace-Meldungen
+            Sehr ausführliche Meldungen für Messungen
+            und detaillierten internen Aufrufen
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.KcaLogLevel.Debug">
+            <summary>
+            Debug-Meldungen
+            Meldungen für Fehlersuche und internen
+            Programmierinformationen
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.KcaLogLevel.Info">
+            <summary>
+            Info-Meldungen
+            Allgemeine Meldungen
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.KcaLogLevel.Warn">
+            <summary>
+            Warn-Meldungen
+            Meldungen über Verhalten, die nicht zum
+            Absturz führen, aber nicht beabsichtiges Verhalten
+            auslösen könnten
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.KcaLogLevel.Error">
+            <summary>
+            Error-Meldungen
+            Aufgetretener, erwarteter Fehler
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.KcaLogLevel.Fatal">
+            <summary>
+            Fatal-Meldungen
+            Fehler, der zum Programmabsturz oder Programmabbruch führt
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Enumerations.KcaLogLevel.All">
+            <summary>
+            Alle Logmeldungen loggen (nur Logger)
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Extensions.ValueExtension">
+            <summary>
+            Erweiterung für diverse Wertetypen
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.Negate(System.Boolean)">
+            <summary>
+            Negiert einen Boolean
+            </summary>
+            <param name="value">Boolean</param>
+            <returns>Negierter Boolean</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsEpsilon(System.Single,System.Single)">
+            <summary>
+            Vergleicht zwei Float-Variablen auf Gleichheit 
+            mit einer Minimaltoleranz Epsilon
+            </summary>
+            <param name="value">Float-Variable</param>
+            <param name="other">Zu vergleichende Float-Variable</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsEpsilon(System.Single,System.Single,System.Single)">
+            <summary>
+            Vergleicht zwei Float-Variablen auf Gleichheit 
+            mit einer Toleranz
+            </summary>
+            <param name="value">Float-Variable</param>
+            <param name="other">Zu vergleichende Float-Variable</param>
+            <param name="epsilon">Toleranz</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsEpsilon(System.Double,System.Double)">
+            <summary>
+            Vergleicht zwei Float-Variablen auf Gleichheit 
+            mit einer Minimaltoleranz Epsilon
+            </summary>
+            <param name="value">Float-Variable</param>
+            <param name="other">Zu vergleichende Float-Variable</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsEpsilon(System.Double,System.Double,System.Double)">
+            <summary>
+            Vergleicht zwei Float-Variablen auf Gleichheit 
+            mit einer Toleranz
+            </summary>
+            <param name="value">Float-Variable</param>
+            <param name="other">Zu vergleichende Float-Variable</param>
+            <param name="epsilon">Toleranz</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsRounded(System.Single,System.Single,System.Int32,System.MidpointRounding)">
+            <summary>
+            Vergleicht zwei Gleitkommazahlen auf Gleichheit, gerundet
+            auf eine bestimmte Anzahl Stellen nach dem Komma
+            </summary>
+            <param name="value">Variable</param>
+            <param name="other">Zu vergleichende Variable</param>
+            <param name="decimals">Dezimalstellen nach dem Komma</param>
+            <param name="roundingMode">Rundungsvariante</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsRounded(System.Double,System.Double,System.Int32,System.MidpointRounding)">
+            <summary>
+            Vergleicht zwei Gleitkommazahlen auf Gleichheit, gerundet
+            auf eine bestimmte Anzahl Stellen nach dem Komma
+            </summary>
+            <param name="value">Variable</param>
+            <param name="other">Zu vergleichende Variable</param>
+            <param name="decimals">Dezimalstellen nach dem Komma</param>
+            <param name="roundingMode">Rundungsvariante</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsRounded(System.Decimal,System.Decimal,System.Int32,System.MidpointRounding)">
+            <summary>
+            Vergleicht zwei Gleitkommazahlen auf Gleichheit, gerundet
+            auf eine bestimmte Anzahl Stellen nach dem Komma
+            </summary>
+            <param name="value">Variable</param>
+            <param name="other">Zu vergleichende Variable</param>
+            <param name="decimals">Dezimalstellen nach dem Komma</param>
+            <param name="roundingMode">Rundungsvariante</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsInteger(System.Single,System.Single)">
+            <summary>
+            Prüft, ob die Ganzzahlwerte zweiter Gleitkommazahlen identisch sind
+            </summary>
+            <param name="value">Variable</param>
+            <param name="other">Variable</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsInteger(System.Double,System.Double)">
+            <summary>
+            Prüft, ob die Ganzzahlwerte zweiter Gleitkommazahlen identisch sind
+            </summary>
+            <param name="value">Variable</param>
+            <param name="other">Variable</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsInteger(System.Decimal,System.Decimal)">
+            <summary>
+            Prüft, ob die Ganzzahlwerte zweiter Gleitkommazahlen identisch sind
+            </summary>
+            <param name="value">Variable</param>
+            <param name="other">Variable</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.SByte,System.SByte)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.Int16,System.Int16)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.Int32,System.Int32)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.Int64,System.Int64)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.Single,System.Single)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.Single,System.Single,System.Single)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <param name="epsilon">Minimaltoleranz</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.Double,System.Double)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.Double,System.Double,System.Double)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <param name="epsilon">Minimaltoleranz</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.EqualsAbs(System.Decimal,System.Decimal)">
+            <summary>
+            Prüft, ob zwei numerische Werte identisch sind ohne die Vorzeichen
+            </summary>
+            <param name="value">Wert</param>
+            <param name="other">Zu vergleichender Wert</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.Byte,System.Byte,System.Byte,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.SByte,System.SByte,System.SByte,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.Char,System.Char,System.Char,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.Int16,System.Int16,System.Int16,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.Int64,System.Int64,System.Int64,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.UInt16,System.UInt16,System.UInt16,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.UInt32,System.UInt32,System.UInt32,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.UInt64,System.UInt64,System.UInt64,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.Single,System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.Double,System.Double,System.Double,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.Decimal,System.Decimal,System.Decimal,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.TimeSpan,System.TimeSpan,System.TimeSpan,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.IsBetween(System.DateTime,System.DateTime,System.DateTime,System.Boolean,System.Boolean)">
+            <summary>
+            Prüft, ob ein Wert zweischen zwei anderen Werten liegt
+            </summary>
+            <param name="value">Wert</param>
+            <param name="from">Minimalwert</param>
+            <param name="to">Maximalwert</param>
+            <param name="fromInclusive">Minimalwert erlauben</param>
+            <param name="toInclusive">Maximalwert erlauben</param>
+            <returns>Wert liegt zwischen beiden anderen Werten</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Boolean)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Byte)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.SByte)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Char)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Int16)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Int32)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Int64)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.UInt16)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.UInt32)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.UInt64)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Single)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Double)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Decimal)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.TimeSpan)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.DateTime)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.ValueExtension.ToFormattedString(System.Guid)">
+            <summary>
+            PWandelt den Wertetyp anhand der Language-Einstellungen für Kultur und Format in eine Zeichenkette um
+            </summary>
+            <param name="value">Wert</param>
+            <returns>Zeichenkettenräpresentation</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Exceptions.ExpressionExecutionFailedException">
+            <summary>
+            Exception, welche ausgelöst wird, wenn der Aufruf einer Exception fehlschlägt
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.ExpressionExecutionFailedException.#ctor">
+            <summary>
+            Basiskonstruktor
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.ExpressionExecutionFailedException.#ctor(System.String)">
+            <summary>
+            Konstruktor mit Fehlermeldung
+            </summary>
+            <param name="message">Fehlermeldung</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.ExpressionExecutionFailedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Konstruktor mit Fehlermeldung in InnerException
+            </summary>
+            <param name="message">Fehlermeldung</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Exceptions.ExpressionExecutionFailedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            GetObjectData für serialisieren der Fehlernummer-Eigenschaft
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Events.KcaLogEventArgs">
+            <summary>
+            Event-Argumente für den LogEvent
+            Enthält den LogLevel, die Nachricht sowie eine aufgetretene Exception
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Events.KcaLogEventArgs.DEFAULT_LOGLEVEL">
+            <summary>
+            Standard-Loglevel für Meldungen
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Types.Events.KcaLogEventArgs.EXCEPTION_LOGLEVEL">
+            <summary>
+            Standard-Loglevel für Exception-Meldungen
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Events.KcaLogEventArgs.#ctor(System.String)">
+            <summary>
+            Konstruktor für eine Info-Logmeldung
+            LogLevel ist standardmässig Info
+            </summary>
+            <param name="message">Meldungstext</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Events.KcaLogEventArgs.#ctor(System.String,System.Object[])">
+            <summary>
+            Konstruktor für eine Info-Logmeldung
+            LogLevel ist standardmässig Info
+            </summary>
+            <param name="format">Meldungstext (Format)</param>
+            <param name="param">Meldungsparameter</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Events.KcaLogEventArgs.#ctor(KcaLibrary.Core.Types.Enumerations.KcaLogLevel,System.String)">
+            <summary>
+            Konstruktor für eine Logmeldung
+            LogLevel ist auswählbar
+            </summary>
+            <param name="logLevel">LogLevel der Meldung</param>
+            <param name="message">Meldungstext</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Events.KcaLogEventArgs.#ctor(KcaLibrary.Core.Types.Enumerations.KcaLogLevel,System.String,System.Object[])">
+            <summary>
+            Konstruktor für eine Logmeldung
+            LogLevel ist auswählbar
+            </summary>
+            <param name="logLevel">LogLevel der Meldung</param>
+            <param name="format">Meldungstext (Format)</param>
+            <param name="param">Meldungsparameter</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Events.KcaLogEventArgs.#ctor(System.Exception,System.String)">
+            <summary>
+            Konstruktor für eine Error-Logmeldung mit Exception
+            LogLevel ist standardmässig Error
+            </summary>
+            <param name="occuredException">Aufgetretene Exception</param>
+            <param name="message">Meldungstext</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Events.KcaLogEventArgs.#ctor(System.Exception,System.String,System.Object[])">
+            <summary>
+            Konstruktor für eine Error-Logmeldung mit Exception
+            LogLevel ist standardmässig Error
+            </summary>
+            <param name="occuredException">Aufgetretene Exception</param>
+            <param name="format">Meldungstext (Format)</param>
+            <param name="param">Meldungsparameter</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Events.KcaLogEventArgs.#ctor(KcaLibrary.Core.Types.Enumerations.KcaLogLevel,System.Exception,System.String)">
+            <summary>
+            Konstruktor für eine Logmeldung mit Exception
+            LogLevel ist auswählbar
+            </summary>
+            <param name="logLevel">LogLevel der Meldung</param>
+            <param name="occuredException">Aufgetretene Exception</param>
+            <param name="message">Meldungstext</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Events.KcaLogEventArgs.#ctor(KcaLibrary.Core.Types.Enumerations.KcaLogLevel,System.Exception,System.String,System.Object[])">
+            <summary>
+            Konstruktor für eine Logmeldung mit Exception
+            LogLevel ist auswählbar
+            </summary>
+            <param name="logLevel">LogLevel der Meldung</param>
+            <param name="occuredException">Aufgetretene Exception</param>
+            <param name="format">Meldungstext (Format)</param>
+            <param name="param">Meldungsparameter</param>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Events.KcaLogEventArgs.LogLevel">
+            <summary>
+            LogLevel der Meldung
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Events.KcaLogEventArgs.Message">
+            <summary>
+            Nachricht
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Events.KcaLogEventArgs.OccuredException">
+            <summary>
+            Aufgetrene Exception
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Common.Helpers">
+            <summary>
+            Statische Klasse mit diversen, allgemeinen Hilfsmethoden
+            für häufig verwendete Funktionen
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.GenerateGuid">
+            <summary>
+            Erstellt eine neue, eindeutige GUID
+            </summary>
+            <returns>GUID</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.GetRandomNumber">
+            <summary>
+            Gibt eine Zufallszahl zurück
+            </summary>
+            <returns>Zufallszahl</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.GetRandomNumber(System.Int32)">
+            <summary>
+            Gibt eine Zufallszahl zurück, welche grösser oder gleich
+            einer Maximalangabe ist
+            </summary>
+            <param name="maximum">Maximaler Wert</param>
+            <returns>Zufallszahl</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.GetRandomNumber(System.Int32,System.Int32)">
+            <summary>
+            Gibt eine Zufallszahl zurück, welche grösser oder gleich
+            einer Minimalangabe und kleiner als die Maximalangabe ist
+            </summary>
+            <param name="minimum">Minimaler Wert</param>
+            <param name="maximum">Maximaler Wert</param>
+            <returns>Zufallszahl</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.Byte[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.Decimal[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.Double[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.Single[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.Int32[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.Int64[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.SByte[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.Int16[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.UInt32[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.UInt64[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.Average(System.UInt16[])">
+            <summary>
+            Berechnet den Durchschnitt der übergebenen Werte
+            (unchecked)
+            </summary>
+            <param name="values">Werte</param>
+            <returns>Durchschnittsberechnung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.AsArray``1(``0[])">
+            <summary>
+            Gibt die übergebenen Variablen als Array zurück
+            </summary>
+            <typeparam name="TSource">Typ der Variablen</typeparam>
+            <param name="items">Variablen</param>
+            <returns>Array</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.AsList``1(``0[])">
+            <summary>
+            Gibt die übergebenen Variablen als Liste zurück
+            </summary>
+            <typeparam name="TSource">Typ der Variablen</typeparam>
+            <param name="items">Variablen</param>
+            <returns>List-Collection</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.AsSet``1(``0[])">
+            <summary>
+            Gibt die übergebenen Variablen als Set zurück
+            </summary>
+            <typeparam name="TSource">Typ der Variablen</typeparam>
+            <param name="items">Variablen</param>
+            <returns>Set-Collection</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.AsSet``1(System.Collections.Generic.IEqualityComparer{``0},``0[])">
+            <summary>
+            Gibt die übergebenen Variablen als Set zurück
+            </summary>
+            <typeparam name="TSource">Typ der Variablen</typeparam>
+            <param name="comparer">Comparer für benutzerdefinierte Gleichheit</param>
+            <param name="items">Variablen</param>
+            <returns>Set-Collection</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.AsStack``1(``0[])">
+            <summary>
+            Gibt die übergebenen Variablen als Stack-Collection zurück
+            </summary>
+            <typeparam name="TSource">Typ der Variablen</typeparam>
+            <param name="items">Variablen</param>
+            <returns>Stack-Collection</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.AsQueue``1(``0[])">
+            <summary>
+            Gibt die übergebenen Variablen als Queue-Collection zurück
+            </summary>
+            <typeparam name="TSource">Typ der Variablen</typeparam>
+            <param name="items">Variablen</param>
+            <returns>Set</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.AsEnumerable``1(``0[])">
+            <summary>
+            Gibt die übergebenen Variablen als Aufzählung zurück
+            </summary>
+            <typeparam name="TSource">Typ der Variablen</typeparam>
+            <param name="items">Variablen</param>
+            <returns>Aufzählung</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.EnumSetFlag``1(``0@,``0)">
+            <summary>
+            Setzt bei einem Flag-Enum ein Flag
+            </summary>
+            <param name="target">Ziel-Enum</param>
+            <param name="flag">Flag-Wert</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.EnumRemoveFlag``1(``0@,``0)">
+            <summary>
+            Entfernt bei einem Flag-Enum ein Flag
+            </summary>
+            <param name="target">Ziel-Enum</param>
+            <param name="flag">Flag-Wert</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Helpers.EnumHasFlag``1(``0@,``0)">
+            <summary>
+            Gibt zurück, ob ein Flag bei einem Flag-Enum gesetzt ist
+            </summary>
+            <param name="target">Ziel-Enum</param>
+            <param name="flag">Flag-Wert</param>
+            <returns>Wahrheitswert</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Items.MultiLanguageCollection">
+            <summary>
+            Mehrsprachen-Collection
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Items.MultiLanguageCollection.#ctor(KcaLibrary.Core.Types.Items.LanguageTextCollection)">
+            <summary>
+            Konstruktor
+            </summary>
+            <param name="defaultLanguage">Standard-Texte</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Items.MultiLanguageCollection.Add(KcaLibrary.Core.Types.Items.LanguageTextCollection)">
+            <summary>
+            Fügt einen neuen Sprachtext in die Collection
+            Ist für die gleiche Kultur bereits eine Sprache vorhanden, wird diese überschrieben
+            </summary>
+            <param name="item">LanguageTextCollection</param>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Items.MultiLanguageCollection.DefaultCulture">
+            <summary>
+            Die eingestellte Standardsprache, wenn die definierte Sprache nicht hinterlegt ist
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Items.MultiLanguageCollection.Item(System.UInt64)">
+            <summary>
+            Gibt für in der Language-Klasse definierte Kultur und einem
+            Index den Text zurück
+            </summary>
+            <param name="index">Text-Index</param>
+            <returns>Text</returns>
+        </member>
+        <member name="P:KcaLibrary.Core.Types.Items.MultiLanguageCollection.Item(System.Globalization.CultureInfo,System.UInt64)">
+            <summary>
+            Gibt für eine benutzerdefinierte Culture die Sprache zurück
+            </summary>
+            <param name="culture">Benutzerdefinierte Culture</param>
+            <param name="index">Text-Index</param>
+            <returns>Text</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Common.Comparer.SequenceEqualityComparer`1">
+            <summary>
+            Gleichheits-Vergleicher, welcher für zwei Enumerables
+            die Gleichheit anhand der enthaltenen Objekte berechnet
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Interfaces.IKcaComparer">
+            <summary>
+            Markierungsschittstelle für Comparer
+            der KCA-Library
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.SequenceEqualityComparer`1.#ctor">
+            <summary>
+            Basiskonstruktor
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.SequenceEqualityComparer`1.#ctor(System.Collections.Generic.IComparer{`0})">
+            <summary>
+            Konstruktor für benutzerdefinierte Sortierung der Objekte
+            </summary>
+            <param name="sortComparer">Vergleichs-Operator</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.SequenceEqualityComparer`1.Equals(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Prüft die übergebenen Variablen auf Gleichheit
+            </summary>
+            <param name="x">Variable X</param>
+            <param name="y">Variable Y</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.SequenceEqualityComparer`1.GetHashCode(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Berechnet den HashCode für die übergebene Variable
+            </summary>
+            <param name="obj">Variable</param>
+            <returns>Hash-Code</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Interfaces.ILoggable">
+            <summary>
+            Interface für alle Komponenten, die Logmeldungen mittels dem KcaLogEventHandler erzeugen
+            </summary>
+        </member>
+        <member name="E:KcaLibrary.Core.Types.Interfaces.ILoggable.LogEvent">
+            <summary>
+            Event, welcher ausgelöst wird, wenn eine Logmeldung erzeugt wurde
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Factories.LanguageCollectionFactory">
+            <summary>
+            Factory für LanguageTextCollection aus Sprach-XML
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Factories.LanguageCollectionFactory.CreateFromLanguageXml(System.Xml.Linq.XElement)">
+            <summary>
+            Erstellt aus einem Sprach-XML eine LanguageTextCollection
+            </summary>
+            <param name="xml">XML</param>
+            <returns>LanguageTextCollection</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Types.Factories.LanguageCollectionFactory.CreateFromLanguageXml(System.IO.Stream)">
+            <summary>
+             Erstellt aus einem Sprach-XML eine LanguageTextCollection
+            </summary>
+            <param name="stream">XML-Stream</param>
+            <returns>LanguageTextCollection</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Extensions.CollectionExtensions">
+            <summary>
+            Statische Klasse für Erweiterungsmethoden für Collections und Enumerables
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStringEnumerable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gibt für jedes Element in der Enumeration die 
+            String-Räpresentation in einem Enumeration zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <returns>String-Enumerable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStringEnumerable``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Gibt für jedes Element in der Enumeration die 
+            String-Räpresentation in einem Enumeration zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <param name="formatString">Benutzerdefinierter Format-String</param>
+            <returns>String-Enumerable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStringEnumerable``1(System.Collections.Generic.IEnumerable{``0},System.IFormatProvider)">
+            <summary>
+            Gibt für jedes Element in der Enumeration die 
+            String-Räpresentation in einem Enumeration zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <param name="formatProvider">Der Formatprovider für die String-Umwandlung</param>
+            <returns>String-Enumerable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStringEnumerable``1(System.Collections.Generic.IEnumerable{``0},System.IFormatProvider,System.String)">
+            <summary>
+            Gibt für jedes Element in der Enumeration die 
+            String-Räpresentation in einem Enumeration zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <param name="formatProvider">Der Formatprovider für die String-Umwandlung</param>
+            <param name="formatString">Benutzerdefinierter Format-String</param>
+            <returns>String-Enumerable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStringArray``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gibt für jedes Element in der Enumeration die 
+            String-Räpresentation in einem Array zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <returns>String-Array</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStringArray``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Gibt für jedes Element in der Enumeration die 
+            String-Räpresentation in einem Array zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <param name="formatString">Benutzerdefinierter Format-String</param>
+            <returns>String-Array</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStringArray``1(System.Collections.Generic.IEnumerable{``0},System.IFormatProvider)">
+            <summary>
+            Gibt für jedes Element in der Enumeration die 
+            String-Räpresentation in einem Array zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <param name="formatProvier">Der Formatprovider für die String-Umwandlung</param>
+            <returns>String-Array</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStringArray``1(System.Collections.Generic.IEnumerable{``0},System.IFormatProvider,System.String)">
+            <summary>
+            Gibt für jedes Element in der Enumeration die 
+            String-Räpresentation in einem Array zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <param name="formatProvier">Der Formatprovider für die String-Umwandlung</param>
+            <param name="formatString">Benutzerdefinierter Format-String</param>
+            <returns>String-Array</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ConvertEnumerable``2(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Konvertiert jedes Element im Enumerable in den Typ
+            mittels as parameter und gibt das Ergebnis als Enumerable zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <typeparam name="TResult">Zu konvertierender Typ</typeparam>
+            <param name="collection">Collection</param>
+            <returns>Konvertierte Enumerable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ConvertArray``2(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Konvertiert jedes Element im Enumerable in den Typ
+            mittels as parameter und gibt das Ergebnis als Array zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <typeparam name="TResult">Zu konvertierender Typ</typeparam>
+            <param name="collection">Collection</param>
+            <returns>Konvertiertes Array</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.Merge``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Kombiniert diese Enumerable mit einer weiteren Enumerable
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <param name="other">Anzuhängendes Enumerable</param>
+            <returns>Kombiniertes Enumerable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.UnionWith``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Verbindet diese Enumerable mit einem weiteren Enumerable,
+            wobei nur Elemente ins neue Enumerable angefügt werden,
+            welche in diesem noch nicht existieren
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <param name="other">Zu verbindendes Enumerable</param>
+            <returns>Verbundenes Enumerable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.UnionWith``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            Verbindet diese Enumerable mit einem weiteren Enumerable,
+            wobei nur Elemente ins neue Enumerable angefügt werden,
+            welche in diesem noch nicht existieren
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <param name="other">Zu verbindendes Enumerable</param>
+            <param name="comparer">Benutzerdefinierter EqualityComparer</param>
+            <returns>Verbundenes Enumerable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.SequenceEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})">
+            <summary>
+            Vergleicht die Enumerables anhand ihrer Elemente,
+            welche vorgängig sortiert werden
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <param name="other">Zu vergleichende Collection</param>
+            <param name="comparer">Vergleichs-Comparer</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.SequenceEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0},System.Collections.Generic.IComparer{``0})">
+            <summary>
+            Vergleicht die Enumerables anhand ihrer Elemente,
+            welche vorgängig sortiert werden mit einem benutzerdefiniertem EqualityComparer
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <param name="other">Zu vergleichende Collection</param>
+            <param name="equalityComparer"></param>
+            <param name="comparer">Vergleichs-Comparer</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Führt eine Funktion für jedes Element in der Enumerable aus
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <param name="expression">Auszuführende Funktion</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.None``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Prüft, ob kein Element im IEnumerable ist
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <returns>Wahrheitswert, ob das Enumerable leer ist</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.None``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Prüft, ob kein Element für die Expression True zurückliefert
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <param name="expression">Boolsche Funktion</param>
+            <returns>Wahrheitswert, ob kein Element für den Ausdruck True zurückgeben hat</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToSet``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gibt die Elemente der Enumerable als ISet zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <returns>Set</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToQueue``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gibt die Elemente der Enumerable als Queue zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <returns>Queue</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToStack``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gibt die Elemente der Enumerable als Stack zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <returns>Stack</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToArrayList``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gibt die Elemente der Enumerable als ArrayList
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <returns>ArrayList</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToNonGenericQueue``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gibt die Elemente der Enumerable als Queue
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <returns>Queue</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.ToNonGenericStack``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gibt die Elemente der Enumerable als Stack
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <returns>Stack</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.Section``1(System.Collections.Generic.IEnumerable{``0},System.UInt32,System.UInt32)">
+            <summary>
+            Gibt einen Ausschnitt der IEnumerable zurück
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <param name="fromInclusive">Inkludierter Startindex</param>
+            <param name="toExclusive">Exkludierter Endindex</param>
+            <returns>Array</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.UncheckedSum``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
+            <summary>
+            Führt eine Zusammenzählung Unchecked durch
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Items</typeparam>
+            <param name="collection">Collection</param>
+            <param name="valueSelectorPredicate">Wert-Selektions-Prädikat</param>
+            <returns>Array</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.CollectionExtensions.CombineWith``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Hängt an die Collection alle Elemente 
+            des übergebenen Enumerable an
+            </summary>
+            <typeparam name="TSource">Typ der Collection-Elemente</typeparam>
+            <param name="collection">Collection</param>
+            <param name="other">Anzuhängenes Enumerable</param>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Events.KcaEventHandler">
+            <summary>
+            Basis-Eventhandler für alle KcaEvents
+            </summary>
+            <param name="sender">Auslöser</param>
+            <param name="args">KcaEventArgs</param>
+        </member>
+        <member name="T:KcaLibrary.Core.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Properties.Resources.language_de_ch">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Properties.Resources.language_en_us">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Properties.Resources.language_fr_ch">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Properties.Resources.language_it_ch">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Properties.Resources.language_rm_ch">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Extensions.StringExtensions">
+            <summary>
+            Statische Klasse für Erweiterungsmethoden für die Klasse String
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Extensions.StringExtensions.REAL_SEPARATOR">
+            <summary>
+            Separator für Ersetzungen mit Delimiter
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Extensions.StringExtensions.ordinalEqualityComparer">
+            <summary>
+            Gleichheitsvergleicher für Strings Ordinal
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Extensions.StringExtensions.ordinalIgnoreCaseEqualityComparer">
+            <summary>
+            Gleichheitsvergleicher für Strings Ordinal IgnoreCase
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Extensions.StringExtensions.invariantEqualityComparer">
+            <summary>
+            Gleichheitsvergleicher für Strings Invariant
+            </summary>
+        </member>
+        <member name="F:KcaLibrary.Core.Extensions.StringExtensions.invariantIgnoreCaseEqualityComparer">
+            <summary>
+            Gleichheitsvergleicher für Strings Invariant IgnoreCase
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.Split(System.String,System.StringSplitOptions,System.Char,System.Char[])">
+            <summary>
+            Trennt die Zeichenkette anhand
+            eines oder mehreren Separators und eines Delimiters
+            in mehrere Zeichenketten
+            </summary>
+            <param name="value">Aufzutrennende Zeichenkette</param>
+            <param name="options">StringSplit-Options</param>
+            <param name="delimiter">Delimiter</param>
+            <param name="separator">Separator</param>
+            <returns>Aufgetrennte Zeichenkette</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.Split(System.String,System.Int32[])">
+            <summary>
+            Trennt die Zeichenkette an den Positionen der übergebenen Zeichenketten
+            </summary>
+            <param name="value">Aufzutrennende Zeichenkette</param>
+            <param name="indexes">Indexe, wo die Zeichenkette aufgetrennt wird</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.Concat(System.Collections.Generic.IEnumerable{System.String},System.Char)">
+            <summary>
+            Fügt eine oder mehrere Zeichenketten zusammen, unterteilt
+            von einem Separator
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="separator">Separator</param>
+            <returns></returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.Concat(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Fügt eine oder mehrere Zeichenketten zusammen, unterteilt
+            von einem Separator
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="separator">Separator</param>
+            <returns></returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.Concat(System.Collections.Generic.IEnumerable{System.String},System.Char,System.Char)">
+            <summary>
+            Fügt eine oder mehrere Zeichenketten zusammen, unterteilt
+            von einem Separator und abgegrenzt mit einem Delimiter
+            </summary>
+            <param name="value"></param>
+            <param name="separator"></param>
+            <param name="delimiter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.Concat(System.Collections.Generic.IEnumerable{System.String},System.String,System.String)">
+            <summary>
+            Fügt eine oder mehrere Zeichenketten zusammen, unterteilt
+            von einem Separator und abgegrenzt mit einem Delimiter
+            </summary>
+            <param name="value"></param>
+            <param name="separator"></param>
+            <param name="delimiter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToBoolean(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Boolean
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToByte(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Byte
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToChar(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Char
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToDateTime(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ DateTime
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToDecimal(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Decimal
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToDouble(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Double
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToInt16(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int16
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToInt32(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int32
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToInt64(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Int64
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToUInt16(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt16
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToUInt32(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt32
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToUInt64(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ UInt64
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToSByte(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ SByte
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToSingle(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Single
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.ToGuid(System.String)">
+            <summary>
+            Konvertiert die  Zeichenkette 
+            mittels Kultureinstellungen und Darstellungsoptionen
+            in eine Variable vom Typ Guid
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Variable</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsOrdinal(System.String,System.String)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine andere Zeichenkette
+            mittels StringOrdinal-Vergleichsmethode
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsOrdinalIgnoreCase(System.String,System.String)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine andere Zeichenkette
+            mittels StringOrdinalIgnoreCase-Vergleichsmethode
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsInvariant(System.String,System.String)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine andere Zeichenkette
+            mittels Invariant-Kultureinstellung
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsInvariantIgnoreCase(System.String,System.String)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine andere Zeichenkette
+            mittels Invariant-Kultureinstellung 
+            ohne Gross/Kleinschreibung zu beachten
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsCurrentCulture(System.String,System.String)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine andere Zeichenkette
+            mittels Kultureinstellung der Language-Klasse
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsCurrentCultureIgnoreCase(System.String,System.String)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine andere Zeichenkette
+            mittels Kultureinstellung der Language-Klasse
+            ohne Gross/Kleinschreibung zu beachten
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsCulture(System.String,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine andere Zeichenkette
+            mittels Kultureinstellung der Language-Klasse
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <param name="culture">Kultur für den Vergleich</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsCultureIgnoreCase(System.String,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine andere Zeichenkette
+            mittels Kultureinstellung der Language-Klasse
+            ohne Gross/Kleinschreibung zu beachten
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <param name="culture">Kultur für den Vergleich</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsConvertedOrdinal``1(System.String,``0)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine Zeichenkettenräpresentation
+            eines Objektes
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <typeparam name="T">Typ des Objektes</typeparam>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsConvertedOrdinal``1(System.String,``0,System.Func{``0,System.String})">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine Zeichenkettenräpresentation
+            eines Objektes mittels einer benutzerdefinierten
+            ToString-Expression
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <param name="toStringExpression">Expression, welche den übergebenen Typ in eine Zeichenkette umwandelt</param>
+            <typeparam name="T">Typ des Objektes</typeparam>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsConvertedOrdinalIgnoreCase``1(System.String,``0)">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine Zeichenkettenräpresentation
+            eines Objektes
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <typeparam name="T">Typ des Objektes</typeparam>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.EqualsConvertedOrdinalIgnoreCase``1(System.String,``0,System.Func{``0,System.String})">
+            <summary>
+            Vergleicht die Zeichenkette
+            gegen eine Zeichenkettenräpresentation
+            eines Objektes mittels einer benutzerdefinierten
+            ToString-Expression
+            ohne Gross/Kleinschreibung zu beachten
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="other">Zu vergleichende Zeichenkette</param>
+            <param name="toStringExpression">Expression, welche den übergebenen Typ in eine Zeichenkette umwandelt</param>
+            <typeparam name="T">Typ des Objektes</typeparam>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.Except(System.String,System.String)">
+            <summary>
+            Entfernt aus der Zeichenkette eine andere Zeichenkette
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <param name="except">Zu entfernende Zeichenkette</param>
+            <returns>Zeichenkette mit Entfernungen</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.IsEmpty(System.String)">
+            <summary>
+            Gibt zurück, ob die Zeichenkette leer ist
+            (ohne Null-Prüfung)
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Warheitswert</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Extensions.StringExtensions.IsNotEmpty(System.String)">
+            <summary>
+            Gibt zurück, ob die Zeichenkette nicht leer ist
+            (ohne Null-Prüfung)
+            </summary>
+            <param name="value">Zeichenkette</param>
+            <returns>Warheitswert</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Common.Comparer.HashEqualityComparer`1">
+            <summary>
+            Gleichheits-Vergleicher, welcher mittels dem 
+            HashCode der übergebenen Variablen eine 
+            Gleichheitsprüfung durchführt
+            </summary>
+            <typeparam name="T">Typ der Variable</typeparam>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.HashEqualityComparer`1.#ctor">
+            <summary>
+            Default Konstruktor
+            Setzt für Null-Werte den Hashcode '0'
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.HashEqualityComparer`1.#ctor(System.Int32)">
+            <summary>
+            Konstruktor für benutzerdefinierter Null-Hash-Côde
+            </summary>
+            <param name="hashcodeIfNull"></param>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.HashEqualityComparer`1.Equals(`0,`0)">
+            <summary>
+            Prüft die übergebenen Variablen auf Gleichheit
+            </summary>
+            <param name="x">Variable X</param>
+            <param name="y">Variable Y</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.HashEqualityComparer`1.GetHashCode(`0)">
+            <summary>
+            Berechnet den HashCode für die übergebene Variable
+            </summary>
+            <param name="obj">Variable</param>
+            <returns>Hash-Code</returns>
+        </member>
+        <member name="P:KcaLibrary.Core.Common.Comparer.HashEqualityComparer`1.HashCodeIfNull">
+            <summary>
+            Der Hashcode, welcher erzeugt wird, wenn eine Null-Referenz übergeben wird
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Globalisation.MultiLingual">
+            <summary>
+            Klasse für das Aufrufen von mehrsprachigen Texten
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.MultiLingual.#cctor">
+            <summary>
+            Basisinitialisierung von Library-Sprachelementen
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.MultiLingual.GetLibraryText(System.UInt64)">
+            <summary>
+            Gibt einen Text in der eingestellten Sprache 
+            von der Library-Collection zurück
+            </summary>
+            <param name="index">Index</param>
+            <returns>Text</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.MultiLingual.GetUserText(System.UInt64)">
+            <summary>
+            Gibt einen Text in der eingestellten Sprache 
+            von der User-Collection zurück
+            </summary>
+            <param name="index">Index</param>
+            <returns>Text</returns>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.MultiLingual.LibaryLanguageCollection">
+            <summary>
+            Die Sprachelemente der KcaLibrary
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.MultiLingual.UserLanguageCollection">
+            <summary>
+            Die benutzerdefinierten Sprachelemente
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Common.Comparer.ExpressionEqualityComparer`1">
+            <summary>
+            Gleichheits-Vergleicher, welcher über eine benutzerdefinierte
+            Expression eine Gleichheitsprüfungund eine Hash-Code-Abfrage
+            durchführt
+            </summary>
+            <typeparam name="T">Typ der vergleichenden Variablen</typeparam>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.ExpressionEqualityComparer`1.#ctor(System.Func{`0,`0,System.Boolean},System.Func{`0,System.Int32})">
+            <summary>
+            Konstruktor
+            </summary>
+            <param name="equalityExpression">Expression für die Gleichheitsprüfung</param>
+            <param name="hashcodeExpression">Expression für Hash-Code</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.ExpressionEqualityComparer`1.Equals(`0,`0)">
+            <summary>
+            Prüft die übergebenen Variablen auf Gleichheit
+            </summary>
+            <param name="x">Variable X</param>
+            <param name="y">Variable Y</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.ExpressionEqualityComparer`1.GetHashCode(`0)">
+            <summary>
+            Berechnet den HashCode für die übergebene Variable
+            </summary>
+            <param name="obj">Variable</param>
+            <returns>Hash-Code</returns>
+        </member>
+        <member name="T:KcaLibrary.Core.Types.Events.KcaLogEventHandler">
+            <summary>
+            Eventhandler für Logmeldungen
+            </summary>
+            <param name="sender">Auslösuer</param>
+            <param name="e">KcaLogEventArgs</param>
+        </member>
+        <member name="T:KcaLibrary.Core.Globalisation.Language">
+            <summary>
+            Klasse für die Globalisierung
+            Enthält Kultureinstellungen, Formatdefinitionen und Textdefinitionen
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Language.#cctor">
+            <summary>
+            Initialisiert die Standardwerte der Language-Klasse
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Language.SetDefaults">
+            <summary>
+            Setzt die Standardeinstellungen
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Language.SetCurrentThreadCultureInfo">
+            <summary>
+            Setzt für den Thread, der die Methode aufruft, die Kultureinstellungen 
+            der Language-Klasse
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Language.SetThreadCultureInfo(System.Threading.Thread)">
+            <summary>
+            Setzt für den übergebenen Thread, der die Methode aufruft, die Kultureinstellungen 
+            der Language-Klasse
+            </summary>
+            <param name="t">Thread, auf welchem die Kultureinstellungen angewendet werden</param>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Language.SetLineEnding(KcaLibrary.Core.Types.Enumerations.LineEnding)">
+            <summary>
+            Setzt den Zeilenumbruch anhand der Enumeration
+            </summary>
+            <param name="lineEnding"></param>
+        </member>
+        <member name="M:KcaLibrary.Core.Globalisation.Language.SetEncoding(System.Int32)">
+            <summary>
+            Setzt das Encoding anhand einer Codepage
+            </summary>
+            <param name="codepage">Codepage</param>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.Language.LanguageCultureInfo">
+            <summary>
+            Sprache der Applikation für MultiLanguage
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.Language.ApplicationCultureInfo">
+            <summary>
+            Kultureinstellung der Applikation
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.Language.NumberStylesInteger">
+            <summary>
+            Darstellungsinformation für Ganzzahl-Werte
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.Language.NumberStylesFloat">
+            <summary>
+            Darstellungsinformation für Gleitkommazahl-Werte
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.Language.DateTimeStyles">
+            <summary>
+            Darstellungsinformation für Datumswerte
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.Language.LineEnding">
+            <summary>
+            Verwendeter Zeilenumbruch
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Globalisation.Language.Encoding">
+            <summary>
+            Text-Encoding
+            </summary>
+        </member>
+        <member name="T:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1">
+            <summary>
+            Gleichheits-Vergleicher, welcher mittels 
+            Reflection über alle Member der übergebenen Variablen eine 
+            Gleichheitsprüfung durchführt
+            </summary>
+            <typeparam name="T">Typ der Variable</typeparam>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.#ctor">
+            <summary>
+            Standard-Konstruktor
+            Verwendete folgende Einstellungen
+            IncludeBaseMembers:                 Ein
+            IncludeStaticMembers:               Aus
+            IncludeInstanceMemebers:            Ein
+            IncludeNonPublicMembers:            Aus
+            IncludeNonPrivateStaticBaseMembers: Aus
+            </summary>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Konstruktor für Benutzerdefinierte Memberverwendung
+            </summary>
+            <param name="includeBaseMembers">Bezieht vererbte Member mit ein</param>
+            <param name="includeStaticMembers">Bezieht statische Member mit ein</param>
+            <param name="includeInstanceMemebers">Bezieht Instantvariablen mit ein</param>
+            <param name="includeNonPublicMembers">Bezieht nicht öffentliche Member mit ein</param>
+            <param name="includeNonPrivateStaticMembers">Bezieht nicht private, statische, vererbte Member mit ein </param>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.Equals(`0,`0)">
+            <summary>
+            Prüft die übergebenen Variablen auf Gleichheit
+            </summary>
+            <param name="x">Variable X</param>
+            <param name="y">Variable Y</param>
+            <returns>Gleichheit</returns>
+        </member>
+        <member name="M:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.GetHashCode(`0)">
+            <summary>
+            Berechnet den HashCode für die übergebene Variable anhand der Member
+            </summary>
+            <param name="obj">Variable</param>
+            <returns>Hash-Code</returns>
+        </member>
+        <member name="P:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.IncludeBaseMembers">
+            <summary>
+            Bezieht vererbte Member mit ein
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.IncludeStaticMembers">
+            <summary>
+            Bezieht statische Member mit ein
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.IncludeInstanceMemebers">
+            <summary>
+            Bezieht Instantvariablen mit ein
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.IncludeNonPublicMembers">
+            <summary>
+            Bezieht nicht öffentliche Member mit ein
+            </summary>
+        </member>
+        <member name="P:KcaLibrary.Core.Common.Comparer.MemberwiseEqualityComparer`1.IncludeNonPrivateStaticBaseMembers">
+            <summary>
+            Bezieht nicht private, statische, vererbte Member mit ein 
+            </summary>
+        </member>
+    </members>
+</doc>
